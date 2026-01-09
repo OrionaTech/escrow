@@ -48,7 +48,7 @@ export default function EscrowPage() {
     await provider.send("eth_requestAccounts", []);
 
     const network = await provider.getNetwork();
-    if (network.chainId !== 11155111n) {
+    if (network.chainId !== BigInt(11155111)) {
       alert("Please switch to Sepolia network");
       return;
     }
